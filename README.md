@@ -1,185 +1,59 @@
-🛍️ Laravel 12 E-commerce Admin Panel
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-A clean, modern, and high-performance mini e-commerce administration panel built on Laravel 12. This panel is designed for efficient Customer and Order Management utilizing AJAX for a seamless user experience.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-✨ Features
+## About Laravel
 
-Customer & Order Management: Comprehensive tools for managing both customer profiles and sales orders.
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-AJAX CRUD: Create, Read, Update, and Delete operations handled asynchronously for a smooth workflow.
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-DataTables Integration: Uses AJAX DataTables (server-side processing) for fast, efficient handling of large datasets in the order list.
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-Performance Focused: Implements Eloquent relationships with eager loading to eliminate N+1 query problems.
+## Learning Laravel
 
-Modern UI: Built with Bootstrap 5.3 for a clean, responsive interface.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
 
-User Notifications: Provides intuitive user feedback using Toastr (for transient messages) and SweetAlert (for confirmations).
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-Laravel 12 Ready: Follows the standard Laravel 12 directory structure and best practices.
+## Laravel Sponsors
 
-🛠️ Tech Stack
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-Component
+### Premium Partners
 
-Version / Tech
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
 
-Backend Framework
+## Contributing
 
-Laravel 12.x
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Language
+## Code of Conduct
 
-PHP 8.2+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-Database
+## Security Vulnerabilities
 
-MySQL 8.0+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-Frontend Styling
+## License
 
-Bootstrap 5.3
-
-JavaScript Utility
-
-jQuery 3.6
-
-Data Grid
-
-DataTables 1.13
-
-🚀 Setup Instructions
-
-Follow these steps to get the application running locally.
-
-1️⃣ Clone the Repository
-
-git clone [https://github.com/yourusername/laravel12-ecommerce-admin.git](https://github.com/yourusername/laravel12-ecommerce-admin.git)
-cd laravel12-ecommerce-admin
-
-
-2️⃣ Install Dependencies
-
-composer install
-npm install
-npm run dev
-
-
-3️⃣ Create Environment File
-
-Copy the example environment file and update your database credentials.
-
-cp .env.example .env
-
-
-Ensure your .env file contains the following (adjusting database name/credentials as needed):
-
-APP_NAME="Ecommerce Admin"
-APP_ENV=local
-APP_DEBUG=true
-APP_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=ecommerce_admin
-DB_USERNAME=root
-DB_PASSWORD=
-
-
-4️⃣ Generate Key
-
-php artisan key:generate
-
-
-5️⃣ Run Migrations & Seeders
-
-This command will set up the database schema and populate it with sample customer and order data.
-
-php artisan migrate --seed
-
-
-6️⃣ Serve the Application
-
-php artisan serve
-
-
-Access the admin panel in your browser: 👉 http://127.0.0.1:8000
-
-📂 Directory Overview
-
-Key files and folders for the admin panel logic:
-
-Path
-
-Purpose
-
-app/Http/Controllers/CustomerController.php
-
-Handles customer CRUD operations.
-
-app/Http/Controllers/OrderController.php
-
-Handles order management, list rendering, and status updates.
-
-app/Http/Requests/*Request.php
-
-Form request validation for customer and order data.
-
-resources/views/customers/
-
-Blade views for customer interface.
-
-resources/views/orders/
-
-Blade views (like index.blade.php) for the order list.
-
-routes/web.php
-
-Defines the main application routes.
-
-🔐 Routes Overview
-
-Route
-
-Description
-
-/
-
-Welcome page showing customer orders summary.
-
-/admin/customers
-
-List & manage customers.
-
-/admin/orders
-
-View & manage orders (where the AJAX DataTables are implemented).
-
-💡 Common Issues & Fixes
-
-Problem
-
-Fix
-
-toastr is not defined
-
-Ensure you have added the Toastr JS link: <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> after jQuery.
-
-Class "App\Http\Controllers\Controller" not found
-
-Run composer dump-autoload to regenerate the class map.
-
-Migrations not running
-
-Double-check your database credentials in the .env file.
-
-🧑‍💻 Developer Notes
-
-All routes are protected with the auth middleware (standard admin login logic).
-
-AJAX CRUD operations return JSON responses, which are then used by the frontend to trigger Toastr/SweetAlert feedback.
-
-📜 License
-
-MIT © 2025
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
